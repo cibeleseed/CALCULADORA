@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boletim Digital - Ensino Fundamental</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="header-icon">📚</div>
+        <h1>Boletim Digital</h1>
+        <p>Calculadora de Notas Trimestrais</p>
+        <span class="subtitle">ENSINO FUNDAMENTAL - 6º AO 9º ANO</span>
+    </header>
+
+    <section class="student-info-section">
+
+        <h2>👨‍🎓 Identificação do Estudante</h2>
+
+        <div class="student-fields">
+
+            <div class="form-group">
+                <label for="studentName">Nome do estudante</label>
+                <input type="text" id="studentName"
+                    placeholder="Digite o nome completo">
+            </div>
+
+            <div class="form-group">
+                <label for="studentClass">Turma</label>
+                <input type="text" id="studentClass"
+                    placeholder="Ex.: 7º Ano A">
+            </div>
+
+            <div class="form-group">
+                <label for="schoolYear">Ano letivo</label>
+                <input type="number" id="schoolYear"
+                    value="2026" min="2020" max="2100">
+            </div>
+
+        </div>
+    </section>
+
+    <div id="validationAlert" class="alert"></div>
+
+    <section class="grades-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>📊 Lançamento das Notas</h2>
+                <p>Digite as notas de cada trimestre.</p>
+            </div>
+
+            <span class="grade-info">Notas de 0 a 100</span>
+        </div>
+
+        <div class="table-responsive">
+
+            <table id="gradesTable">
+
+                <thead>
+                    <tr>
+                        <th class="discipline-column">DISCIPLINAS</th>
+                        <th>1º TRI</th>
+                        <th>2º TRI</th>
+                        <th>3º TRI</th>
+                        <th>MÉDIA</th>
+                        <th>SITUAÇÃO</th>
+                        <th>SE LIGA</th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="actions-btn">
+
+            <button class="btn btn-calc" onclick="calcularNotas()">
+                ✓ CALCULAR BOLETIM
+            </button>
+
+            <button class="btn btn-clear" onclick="limparNotas()">
+                ↻ LIMPAR DADOS
+            </button>
+
+            <button class="btn btn-print" onclick="imprimirBoletim()">
+                🖨 IMPRIMIR BOLETIM
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="resultsSection" class="results-section">
+
+        <div class="result-title">
+            <h2>📋 Resultado do Boletim</h2>
+            <p id="studentResultName"></p>
+        </div>
+
+        <div class="summary-cards">
+
+            <div class="card card-aprovadas">
+                <div class="card-icon">✓</div>
+                <h3>Disciplinas Aprovadas</h3>
+                <div class="value" id="sumAprovadas">0</div>
+            </div>
+
+            <div class="card card-reprovadas">
+                <div class="card-icon">!</div>
+                <h3>Não Aprovadas</h3>
+                <div class="value" id="sumReprovadas">0</div>
+            </div>
+
+            <div class="card card-seliga">
+                <div class="card-icon">★</div>
+                <h3>Indicação Se Liga</h3>
+                <div class="value" id="sumSeLiga">0</div>
+            </div>
+
+        </div>
+
+        <div id="recDetails" class="rec-details">
+
+            <h3>📌 Disciplinas com indicação de recuperação</h3>
+
+            <ul id="recList"></ul>
+
+        </div>
+
+        <div id="finalMessage" class="final-message"></div>
+
+    </section>
+
+    <footer>
+        <p>Calculadora Digital de Notas - Ensino Fundamental</p>
+        <p>Média mínima para aprovação: 60 pontos</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

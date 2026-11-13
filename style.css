@@ -1,0 +1,558 @@
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --dark: #1e293b;
+    --background: #f1f5f9;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #eaf2ff, #f8fafc);
+    color: var(--dark);
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(30,64,175,.10);
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    margin: -30px -30px 30px;
+    padding: 30px 20px;
+    border-radius: 18px 18px 0 0;
+    border-bottom: 5px solid #93c5fd;
+}
+
+.header-icon {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0;
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+.subtitle {
+    display: inline-block;
+    background: rgba(255,255,255,.18);
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* IDENTIFICAÇÃO */
+
+.student-info-section {
+    background: #eff6ff;
+    padding: 22px;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.student-info-section h2 {
+    margin: 0 0 18px;
+    color: var(--primary-dark);
+    font-size: 19px;
+}
+
+.student-fields {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+
+/* TÍTULO DA TABELA */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 15px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    color: var(--primary-dark);
+    margin: 0;
+    font-size: 21px;
+}
+
+.section-heading p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+.grade-info {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* TABELA ALINHADA */
+
+.table-responsive {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    font-size: 12px;
+    height: 52px;
+}
+
+th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+th.discipline-column {
+    width: 210px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+td {
+    height: 58px;
+    font-size: 13px;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+.discipline-name {
+    text-align: left;
+    font-weight: 700;
+    padding-left: 15px;
+    color: #334155;
+}
+
+/* CAMPOS DE NOTAS */
+
+.input-nota {
+    width: 65px;
+    height: 38px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-dark);
+    background: white;
+    outline: none;
+}
+
+.input-nota:focus {
+    border-color: var(--primary);
+    background: #eff6ff;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+
+/* BOTÕES */
+
+.actions-btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 35px;
+}
+
+.btn {
+    border: none;
+    border-radius: 9px;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-calc {
+    background: var(--success);
+    color: white;
+}
+
+.btn-clear {
+    background: #64748b;
+    color: white;
+}
+
+.btn-print {
+    background: var(--primary);
+    color: white;
+}
+
+/* RESULTADOS */
+
+.results-section {
+    display: none;
+    border-top: 3px solid var(--primary);
+    padding-top: 25px;
+    margin-top: 30px;
+    scroll-margin-top: 20px;
+}
+
+.result-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.result-title h2 {
+    color: var(--primary-dark);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.result-title p {
+    color: #64748b;
+    font-weight: bold;
+}
+
+/* CARTÕES */
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    text-align: center;
+    padding: 22px 12px;
+    background: white;
+    border: 1px solid var(--border);
+    border-top: 5px solid;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+}
+
+.card-aprovadas {
+    border-top-color: var(--success);
+}
+
+.card-reprovadas {
+    border-top-color: var(--danger);
+}
+
+.card-seliga {
+    border-top-color: var(--warning);
+}
+
+.card-icon {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card h3 {
+    color: #64748b;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.card .value {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.card-aprovadas .value {
+    color: var(--success);
+}
+
+.card-reprovadas .value {
+    color: var(--danger);
+}
+
+.card-seliga .value {
+    color: var(--warning);
+}
+
+/* SITUAÇÃO */
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.badge-aprovado {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge-reprovado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* SE LIGA */
+
+.seliga-tag {
+    display: inline-block;
+    padding: 5px 7px;
+    margin: 2px;
+    border-radius: 5px;
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    color: #92400e;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* LISTA DE RECUPERAÇÃO */
+
+.rec-details {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.rec-details h3 {
+    color: #92400e;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.rec-details li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.final-message {
+    text-align: center;
+    padding: 15px;
+    background: #eff6ff;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+/* ALERTA */
+
+.alert {
+    display: none;
+    padding: 15px;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 35px;
+    padding-top: 15px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 750px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    header {
+        margin: -18px -18px 25px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .student-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .actions-btn {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* IMPRESSÃO DO BOLETIM */
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    header {
+        margin: 0 0 20px;
+        border-radius: 0;
+        background: #1e40af !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .actions-btn,
+    .alert,
+    footer {
+        display: none !important;
+    }
+
+    .table-responsive {
+        overflow: visible;
+    }
+
+    table {
+        min-width: 0;
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 6px 3px;
+        font-size: 9px;
+    }
+
+    .input-nota {
+        border: none;
+        width: 38px;
+        height: auto;
+        font-size: 10px;
+        padding: 0;
+        color: black;
+    }
+
+    .results-section {
+        display: block !important;
+    }
+
+    .summary-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    .student-info-section {
+        break-inside: avoid;
+    }
+
+    .rec-details {
+        break-inside: avoid;
+    }
+}
